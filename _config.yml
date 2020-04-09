@@ -13,22 +13,38 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Scott B's tech blag
-email: cq(hey humans replace this whole thing with a dot)derp@gmail.com
-description: >-
-  Babby's first Jekyll static site.
-
-  Here I document attempting to build shit and occasionally succeeding.
+title: my tech blag
+author: Arglebargle, aka Scott B.
+#email: hello there!
+email_display: a...........@gmail.com
+mailhide_token: Bm5RZ
+#description: >-
+description: |
+  Usually I break things, sometimes I even make them work.
+  
+  We ❤️ jank
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://foundObjects.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: twatterTest
-github_username:  foundObjects
+
+#twitter_username: twatterTest
+github_username: foundObjects
+reddit_username: seaQueue
+google_analytics: UA-115516806-2
+
+show_excerpts: true
 
 # Build settings
 markdown: kramdown
 theme: minima
+#remote_theme: "mmistakes/minimal-mistakes@4.19.1"
 plugins:
   - jekyll-feed
+  - jekyll-archives
+#  - jekyll-include-cache
+
+jekyll-archives:
+  enabled:
+    - tags
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
