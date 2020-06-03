@@ -1,0 +1,7 @@
+<figure class="image">
+  <img src="{{ include.url }}" alt="{{ include.description }}">
+  <figcaption>{% if include.caption %}{{ include.caption }}{% else %}{{ include.description }}{% endif %}</figcaption>
+{% comment %}
+  <figcaption>{{ include.description }}</figcaption>
+{% endcomment %}
+</figure>

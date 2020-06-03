@@ -4,18 +4,11 @@ title: About
 permalink: /about/
 ---
 
-<figure class="image" style="float: right; padding: 20px" >
-  <img src="/assets/mispronouncing.png" alt="blag about it on your wobsite">
-  <figcaption>source: <a href="https://xkcd.com/148/">xkcd.com</a></figcaption>
-</figure>
-
-{% comment %}
-{% include image.html url="/assets/mispronouncing.png" description="blag about it on your wobsite" %}{: style="float: right; padding: 20px" }
-{% endcomment %}
-
-{% comment %}
-![blag about it on your wobsite](/assets/mispronouncing.png){: style="float: right; padding: 20px" }
-{% endcomment %}
+{% include image.html
+  url="/assets/mispronouncing.png"
+  description="blag about it on your wobsite"
+  caption='source: <a href="https://xkcd.com/148/">xkcd.com</a>'
+%}{: style="float: right; padding: 20px" }
 
 I'm a programmer and hobbyist hacker from the SF bay area. I enjoy building high performance open-source systems from inexpensive, low power and/or EOL hardware.
 
