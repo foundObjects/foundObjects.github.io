@@ -13,34 +13,50 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: my tech blag
-author: Arglebargle, aka Scott B.
-#email: hello there!
-email_display: a...........@gmail.com
-mailhide_token: Bm5RZ
-#description: >-
-description: |
-  Usually I break things, sometimes I even make them work.
-  
-  We ❤️ jank
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://foundObjects.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+title:              I ❤️ jank, a tech blag
+author:             Arglebargle, aka Scott B.
+<<<<<<< HEAD
+#email:             hello there!                # patched
+email_display:      a..........e@gmail.com      # patched _includes/footer.html to cloak email address
+mailhide_token:     Bm5RZ                       # mailhide token
+##email:
+##  address:          hello there!
+##  display:          a..........e@gmail.com
+##  mailhide_token:   Bm5RZ
+=======
+email:                                          # patched to hide email address behind mailhide
+  address:          a..........e@gmail.com      # display address; used as public email if no token set
+  mailhide_token:   Bm5RZ                       # mailhide token
+>>>>>>> d6241d1... config tidy, added 'production' testing helper script
+#description: >-                                # `>` fold newlines into spaces; `-` trim trailing newlines
+#  YEET to Prod
+description: |-                                 # `|` multiline block; `-` trim trailing newlines
+  YEET to Prod
+baseurl: ""                                     # the subpath of your site, e.g. /blog
+url: "https://foundObjects.github.io"           # base hostname & protocol for your site, e.g. http://example.com
+show_excerpts:      true                        # index shows post excerpts
 
-#twitter_username: twatterTest
-github_username: foundObjects
-reddit_username: seaQueue
-google_analytics: UA-115516806-2
+# Google Analytics
+google_analytics:   UA-115516806-2
 
-show_excerpts: true
+# Social media
+github_username:    foundObjects
+reddit_username:    seaQueue
+#twitter_username:  twatter+user
 
 # Build settings
-markdown: kramdown
-theme: minima
-#remote_theme: "mmistakes/minimal-mistakes@4.19.1"
+markdown:           kramdown
+remote_theme:       "jekyll/minima@v2.5.1"
+#remote_theme:      "mmistakes/minimal-mistakes@4.19.1"
+
+# minima skin, this isn't super relevant until minima 3.0 (coming Soon™)
+minima:
+  skin: classic
+
 plugins:
   - jekyll-feed
   - jekyll-archives
-#  - jekyll-include-cache
+  - jekyll-include-cache
 
 jekyll-archives:
   enabled:
@@ -49,11 +65,12 @@ jekyll-archives:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile               # start of defaults
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/          # end of defaults
+  - runprod.sh

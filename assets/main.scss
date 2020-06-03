@@ -1,0 +1,17 @@
+---
+---
+
+@import "{{ site.theme }}";
+{% comment %}
+@import "custom";
+  ^ import /_sass/custom.scss, these are sass css templates
+{% endcomment %}
+
+{% comment %}
+custom styles directly in the main stylesheet:
+{% endcomment %}
+.external-media-list a:hover { text-decoration: none; }
+.external-media-list a:hover .username { text-decoration: underline; }
+.external-media-list li + li { padding-top: 5px; }
+.external-media-list { list-style: none; margin-left: 0; }
+

@@ -4,13 +4,27 @@ title: About
 permalink: /about/
 ---
 
-![blag about it on your wobsite](https://imgs.xkcd.com/comics/mispronouncing.png){: style="float: right; padding: 20px" }
+<figure class="image" style="float: right; padding: 20px" >
+  <img src="/assets/mispronouncing.png" alt="blag about it on your wobsite">
+  <figcaption>source: <a href="https://xkcd.com/148/">xkcd.com</a></figcaption>
+</figure>
 
-I'm a hobbyist hacker from the SF bay area.
+{% comment %}
+{% include image.html url="/assets/mispronouncing.png" description="blag about it on your wobsite" %}{: style="float: right; padding: 20px" }
+{% endcomment %}
 
-I enjoy building high performance systems from inexpensive, low power and EOL hardware using open source software.
+{% comment %}
+![blag about it on your wobsite](/assets/mispronouncing.png){: style="float: right; padding: 20px" }
+{% endcomment %}
 
-This blag is where I collect projects that I've worked on that could be useful to someone else. Sort of like /r/homelab, but with less stanning for Unifi products and fewer network diagrams.
+I'm a programmer and hobbyist hacker from the SF bay area. I enjoy building high performance open-source systems from inexpensive, low power and/or EOL hardware.
+
+This blag is largely for my own reference, I find that if I don't write workflows down somewhere the fiddly details get lost by the time I need to reference the project again.
+
+Thanks to:
+  * Github pages for hosting
+  * the Jekyll team
+  * [SuperTinyIcons](https://github.com/edent/SuperTinyIcons)
 
 {% comment %}
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)

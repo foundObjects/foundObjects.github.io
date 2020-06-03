@@ -30,8 +30,13 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        {% comment %} <p>{{- site.description | escape -}}</p> {% endcomment %}
-        <p>{{- site.description | newline_to_br -}}</p>
+{% comment %}
+	<!-- this is the original description handling -->
+	<p>{{- site.description | escape -}}</p>
+
+	<!-- description handling after patching multiline support below -->
+{% endcomment %}
+        <p>{{- site.description | escape | newline_to_br -}}</p>
       </div>
     </div>
 
