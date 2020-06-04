@@ -29,6 +29,11 @@ show_excerpts:      true                        # index shows post excerpts
 # Google Analytics
 google_analytics:   UA-115516806-2
 
+# Disqus Comments
+# Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+disqus:
+  shortname:        foundobjects-1              # Leave shortname blank to disable comments site-wide.
+
 # Social media
 github_username:    foundObjects
 reddit_username:    seaQueue
