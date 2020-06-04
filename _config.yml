@@ -15,19 +15,9 @@
 # in the templates via {{ site.myvariable }}.
 title:              I ❤️ jank, a tech blag
 author:             Arglebargle, aka Scott B.
-<<<<<<< HEAD
-#email:             hello there!                # patched
-email_display:      a..........e@gmail.com      # patched _includes/footer.html to cloak email address
-mailhide_token:     Bm5RZ                       # mailhide token
-##email:
-##  address:          hello there!
-##  display:          a..........e@gmail.com
-##  mailhide_token:   Bm5RZ
-=======
 email:                                          # patched to hide email address behind mailhide
-  address:          a..........e@gmail.com      # display address; used as public email if no token set
+  address:          a..........e@gmail.com      # display address; used as public email  if no token set
   mailhide_token:   Bm5RZ                       # mailhide token
->>>>>>> d6241d1... config tidy, added 'production' testing helper script
 #description: >-                                # `>` fold newlines into spaces; `-` trim trailing newlines
 #  YEET to Prod
 description: |-                                 # `|` multiline block; `-` trim trailing newlines

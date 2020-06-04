@@ -15,12 +15,10 @@
               {{ site.title | escape }}
             {%- endif -%}
             </li>
-            {%- if site.mailhide_token -%}
-            <li><a class="u-email" href="https://mailhide.io/e/{{ site.mailhide_token }}" onclick="mailhidepopup=window.open('https://mailhide.io/e/{{ site.mailhide_token }}','mailhidepopup','width=580,height=635'); return false;">{{ site.email_display }}</a></li>
-            {%- elsif site.email_display -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email_display }}</a></li>
-            {%- elsif site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+            {%- if site.email.mailhide_token -%}
+            <li><a class="u-email" href="https://mailhide.io/e/{{ site.email.mailhide_token }}" onclick="mailhidepopup=window.open('https://mailhide.io/e/{{ site.email.mailhide_token }}','mailhidepopup','width=580,height=635'); return false;">{{ site.email.address }}</a></li>
+            {%- elsif site.email.address -%}
+            <li><a class="u-email" href="mailto:{{ site.email.address }}">{{ site.email.address }}</a></li>
             {%- endif -%}
         </ul>
       </div>
