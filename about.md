@@ -1,4 +1,5 @@
 ---
+# vim: ft=liquid tw=120 wrap
 layout: page
 title: About
 permalink: /about/
