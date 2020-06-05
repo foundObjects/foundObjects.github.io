@@ -69,3 +69,4 @@ exclude:
   - vendor/gems/
   - vendor/ruby/          # end of defaults
   - runprod.sh
+  - _ignore/
