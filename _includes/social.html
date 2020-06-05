@@ -10,11 +10,17 @@
   {%- if site.twitter_username -%}<li><a href="https://www.twitter.com/{{ site.twitter_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-external-icons.svg#twitter' | relative_url }}"></use></svg> <span class="username">{{ site.twitter_username| escape }}</span></a></li>{%- endif -%}
   {%- if site.youtube_username -%}<li><a href="https://youtube.com/{{ site.youtube_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-external-icons.svg#youtube' | relative_url }}"></use></svg> <span class="username">{{ site.youtube_username| escape }}</span></a></li>{%- endif -%}
   {%- if site.googleplus_username -%}<li><a href="https://plus.google.com/{{ site.googleplus_username| escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-external-icons.svg#googleplus' | relative_url }}"></use></svg> <span class="username">{{ site.googleplus_username| escape }}</span></a></li>{%- endif -%}
-{% comment %}
-  probably a good idea to grab SuperTinyIcons that we use and host locally instead of hotlinking
-  {%- if site.reddit_username -%}<li><a href="https://www.reddit.com/u/{{ site.reddit_username| escape }}"><img src="https://edent.github.io/SuperTinyIcons/images/svg/reddit.svg" width="16" class="svg-icon" /> <span class="username">{{ site.reddit_username| escape }}</span></a></li>{%- endif -%} -->
-{% endcomment %}
-  {%- if site.reddit_username -%}<li><a href="https://www.reddit.com/u/{{ site.reddit_username| escape }}"><img src="/assets/reddit.svg" width="16" class="svg-icon" /> <span class="username">{{ site.reddit_username| escape }}</span></a></li>{%- endif -%}
+  {%- comment -%}
+    TODO: either hotlink to SuperTinyIcons on GitHub or pull them down as a subtree/submodule in our repo
 
-{%- if site.rss -%}<li><a href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-external-icons.svg#rss' | relative_url }}"></use></svg> <span>{{ site.rss | escape }}</span></a></li>{%- endif -%}
+    hotlinking to SuperTinyIcons:
+    {%- if site.reddit_username -%}<li><a href="https://www.reddit.com/u/{{ site.reddit_username| escape }}"><img src="https://edent.github.io/SuperTinyIcons/images/svg/reddit.svg" width="16" class="svg-icon" /> <span class="username">{{ site.reddit_username| escape }}</span></a></li>{%- endif -%}
+
+    <!-- Additional sites: -->
+  {%- endcomment -%}
+  {%- if site.reddit_username -%}<li><a href="https://www.reddit.com/u/{{ site.reddit_username| escape }}"><img src="/assets/reddit.svg" width="16" class="svg-icon" /> <span class="username">{{ site.reddit_username| escape }}</span></a></li>{%- endif -%}
+  {%- comment -%}
+    <!-- end additions -->
+  {%- endcomment -%}
+  {%- if site.rss -%}<li><a href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-external-icons.svg#rss' | relative_url }}"></use></svg> <span>{{ site.rss | escape }}</span></a></li>{%- endif -%}
 </ul>

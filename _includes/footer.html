@@ -14,12 +14,12 @@
             {%- else -%}
               {{ site.title | escape }}
             {%- endif -%}
-            </li>
-            {%- if site.email.mailhide_token -%}
-            <li><a class="u-email" href="https://mailhide.io/e/{{ site.email.mailhide_token }}" onclick="mailhidepopup=window.open('https://mailhide.io/e/{{ site.email.mailhide_token }}','mailhidepopup','width=580,height=635'); return false;">{{ site.email.address }}</a></li>
-            {%- elsif site.email.address -%}
-            <li><a class="u-email" href="mailto:{{ site.email.address }}">{{ site.email.address }}</a></li>
-            {%- endif -%}
+          </li>
+          {% if site.email.mailhide_token -%}
+            <li><a class="u-email" href="https://mailhide.io/e/{{- site.email.mailhide_token -}}" onclick="mailhidepopup=window.open('https://mailhide.io/e/{{ site.email.mailhide_token }}','mailhidepopup','width=580,height=635'); return false;">{{- site.email.address -}}</a></li>
+          {%- elsif site.email.address -%}
+            <li><a class="u-email" href="mailto:{{- site.email.address -}}">{{- site.email.address -}}</a></li>
+          {%- endif %}
         </ul>
       </div>
 
@@ -28,12 +28,7 @@
       </div>
 
       <div class="footer-col footer-col-3">
-{% comment %}
-	<!-- this is the original description handling -->
-	<p>{{- site.description | escape -}}</p>
-
-	<!-- description handling after patching multiline support below -->
-{% endcomment %}
+        {% comment -%} NOTE: patched for multi-line descriptions: {%- endcomment -%}
         <p>{{- site.description | escape | newline_to_br -}}</p>
       </div>
     </div>
