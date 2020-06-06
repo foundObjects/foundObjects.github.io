@@ -11,17 +11,20 @@ permalink: /about/
   caption='source: <a href="https://xkcd.com/148/">xkcd.com</a>'
 -%}{: style="float: right; padding: 20px" }
 
-I'm a programmer and hobbyist hacker from the SF bay area. I enjoy building high performance open-source systems from inexpensive, low power and/or EOL hardware.
+I'm a programmer and hobbyist hacker from the SF bay area. I enjoy building high performance open-source systems from
+inexpensive, low power and/or EOL hardware.
 
-This blag is largely for my own reference, I find that if I don't keep a work log the fiddly details get lost by the time I need to reference the project again.
+This blag is largely for my own reference, I find that if I don't keep a work log of the things I've touched the fiddly
+details of projects get lost by the time I need to reference them again.
 
 Thanks to:
-  * Github pages for hosting
-  * the Jekyll team
+  * GitHub pages for hosting
+  * the [Jekyll](https://github.com/jekyll) team
   * [SuperTinyIcons](https://github.com/edent/SuperTinyIcons)
 
 {%- comment -%}
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll
+usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
 You can find the source code for Minima at GitHub:
 [jekyll][jekyll-organization] /
