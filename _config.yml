@@ -15,24 +15,22 @@
 # in the templates via {{ site.myvariable }}.
 title:              I ❤️ jank, a tech blag
 author:             Arglebargle, aka Scott B.
-email:                                          # patched to hide email address behind mailhide
-  address:          a..........e@gmail.com      # display address; used as public email  if no token set
-  mailhide_token:   Bm5RZ                       # mailhide token
-#description: >-                                # `>` fold newlines into spaces; `-` trim trailing newlines
-#  YEET to Prod
-description: |-                                 # `|` multiline block; `-` trim trailing newlines
+email:                                                  # patched to hide email address behind mailhide
+  address:          a..........e@gmail.com              # display address; used as public email if no token set
+  mailhide_token:   Bm5RZ                               # mailhide token
+#description: >-                                        # `>` fold newlines into spaces; `-` trim trailing newlines
+description: |-                                         # `|` multiline block; `-` trim trailing newlines
   YEET to Prod
-baseurl: ""                                     # the subpath of your site, e.g. /blog
-url: "https://foundObjects.github.io"           # base hostname & protocol for your site, e.g. http://example.com
-show_excerpts:      true                        # index shows post excerpts
+baseurl: ""                                             # the subpath of your site, e.g. /blog
+url:                "https://foundObjects.github.io"    # base hostname & protocol for your site, eg: http://example.com
+show_excerpts:      true                                # index shows post excerpts
 
 # Google Analytics
 google_analytics:   UA-115516806-2
 
-# Disqus Comments
-# Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+# Disqus Comments; disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
 disqus:
-  shortname:        foundobjects-1              # Leave shortname blank to disable comments site-wide.
+  shortname:        foundobjects-1                      # Leave shortname blank to disable comments site-wide.
 
 # Social media
 github_username:    foundObjects
@@ -68,5 +66,6 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/          # end of defaults
+  - README.md
   - runprod.sh
   - _ignore/
